@@ -1,7 +1,6 @@
 import cv2
 import os
 
-prueba = 5
 # Crea un objeto de captura de video
 cap = cv2.VideoCapture(0)
 
@@ -19,12 +18,22 @@ while True:
     # Espera a que se presione una tecla
     key = cv2.waitKey(1)
 
-    # Si se presiona la tecla "q", toma una foto y sale del bucle
+    # Si se presiona la tecla "q", toma una foto
     if key == ord('q'):
         # Guarda la foto en la carpeta "fotos"
         cv2.imwrite('fotos/imagen.png', frame)
+
+    # Si se presiona la tecla "ESC", sale del bucle
+    if key == 27:
         break
 
 # Libera la cámara y cierra la ventana
 cap.release()
 cv2.destroyAllWindows()
+
+
+
+
+
+
+
