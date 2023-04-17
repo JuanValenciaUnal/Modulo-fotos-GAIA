@@ -1,6 +1,7 @@
 import cv2
 import os
 
+prueba = 5
 # Crea un objeto de captura de video
 cap = cv2.VideoCapture(0)
 
